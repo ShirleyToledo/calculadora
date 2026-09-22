@@ -12,11 +12,11 @@ public class Main {
         System.out.println("[3] Converter real para Dolar");
         System.out.println("[4] Converter real para Euros");
 
-        int opcao=scanner.nextInt();
+        int opcao= (int) scanner.nextDouble();
 
         System.out.println("Digite um valor: ");
 
-        double valor=scanner.nextInt();
+        double valor=scanner.nextDouble();
         double valorDolar = 5.65;
         double valorEuro = 6.70;
 
@@ -31,12 +31,16 @@ public class Main {
                     break;
                     case 3:
                         double converteDolar = valor/valorDolar;
-                        System.out.println(converteDolar);
+                        String dolarFormatado = String.format("%.2f", converteDolar);
+                        System.out.println(dolarFormatado);
                         break;
                         case 4:
                         double converteEuro = valor/valorEuro;
-                        System.out.println(converteEuro);
-                        break;
+                           String euroFormatado = String.format("%.2f", converteEuro);
+                            System.out.println (euroFormatado);
+                            break;
+
+
 
         }
 
